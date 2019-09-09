@@ -49,3 +49,14 @@ EXEC contact_AllOUT 'Ms.',
 @titleCount = @count OUT
 SELECT @count
 
+
+
+-- display definitions of stored procedures with sp_helptext
+
+sp_helptext contact_AllOUT
+
+-- REB\NAME A PROCEDUREWITH sp_rename 'currentName', 'newName'
+
+-- delete procedure with DROP PROCEDURE procedureName, procedureName, ...,
+
+
