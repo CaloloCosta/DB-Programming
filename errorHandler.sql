@@ -25,3 +25,18 @@
  END
 
  EXEC ErrorProcedure
+
+
+CREATE PROC classExercice
+	AS BEGIN
+		SELECT DepartmentID AS DeptID, Name, GroupName,
+		CASE GroupName
+			WHEN 'Research and Development' THEN 'Room A'
+			WHEN 'Sales and Marketing'THEN 'Room B'
+			WHEN 'Manufacturing' THEN 'Roomc'
+		ELSE 'Room D'
+		END AS ConfRoom
+		FROM HumanResources.Department
+	END
+
+EXEC classExercice
